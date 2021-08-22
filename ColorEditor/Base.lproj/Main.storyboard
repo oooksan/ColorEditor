@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.58" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wWb-hy-UlP">
-                                <rect key="frame" x="78" y="405" width="34" height="20.5"/>
+                                <rect key="frame" x="78" y="405" width="34" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -107,8 +107,10 @@
                             <constraint firstItem="LDM-sl-STH" firstAttribute="top" secondItem="DdL-or-0U8" secondAttribute="bottom" constant="28" id="cfu-kO-1KW"/>
                             <constraint firstItem="L2m-PF-Jql" firstAttribute="top" secondItem="1af-wZ-Nn7" secondAttribute="bottom" constant="37" id="cyl-R1-UMF"/>
                             <constraint firstItem="wWb-hy-UlP" firstAttribute="width" secondItem="LDM-sl-STH" secondAttribute="height" multiplier="17:15" id="dPt-Q4-nHx"/>
+                            <constraint firstItem="J2m-8n-58d" firstAttribute="width" secondItem="c8X-74-P9n" secondAttribute="height" multiplier="34:21" id="fE2-hu-GQ5"/>
                             <constraint firstItem="LDM-sl-STH" firstAttribute="leading" secondItem="wWb-hy-UlP" secondAttribute="trailing" constant="22" id="gIQ-CC-8uR"/>
                             <constraint firstItem="J2m-8n-58d" firstAttribute="top" secondItem="nhe-pv-Ny1" secondAttribute="bottom" constant="39" id="hJr-1A-sKS"/>
+                            <constraint firstItem="c8X-74-P9n" firstAttribute="width" secondItem="wWb-hy-UlP" secondAttribute="height" multiplier="33:20" id="i3O-XP-KaB"/>
                             <constraint firstItem="c8X-74-P9n" firstAttribute="leading" secondItem="1af-wZ-Nn7" secondAttribute="trailing" constant="6" id="mgi-ks-aWq"/>
                             <constraint firstItem="J2m-8n-58d" firstAttribute="leading" secondItem="3Dl-hK-loU" secondAttribute="trailing" constant="22.5" id="pMW-OS-9Rj"/>
                             <constraint firstItem="wWb-hy-UlP" firstAttribute="leading" secondItem="L2m-PF-Jql" secondAttribute="trailing" constant="20" id="pN6-OR-I0U"/>
