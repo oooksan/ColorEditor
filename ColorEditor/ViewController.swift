@@ -23,13 +23,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 20
         
-        redLabel.text = String(redSlider.value)
-        greenLabel.text = String(greenSlider.value)
-        blueLabel.text = String(blueSlider.value)
-        
-        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        initLabelValues()
+        editColorViewBackground()
     }
 
+    
     @IBAction func redSliderAction() {
         redLabel.text = String(round(100 * redSlider.value)/100)
         editColorViewBackground()
@@ -43,6 +41,12 @@ class ViewController: UIViewController {
     @IBAction func blueSliderAction() {
         blueLabel.text = String(round(100 * blueSlider.value)/100)
         editColorViewBackground()
+    }
+    
+    private func initLabelValues() {
+        redLabel.text = String(redSlider.value)
+        greenLabel.text = String(greenSlider.value)
+        blueLabel.text = String(blueSlider.value)
     }
     
     private func editColorViewBackground() {
