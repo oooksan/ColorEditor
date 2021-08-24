@@ -23,30 +23,38 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         colorView.layer.cornerRadius = 20
         
-        initLabelValues()
-        editColorViewBackground()
-    }
-
-    
-    @IBAction func redSliderAction() {
-        redLabel.text = String(round(100 * redSlider.value)/100)
-        editColorViewBackground()
-    }
-
-    @IBAction func greenSliderAction() {
-        greenLabel.text = String(round(100 * greenSlider.value)/100)
+        setValue(for: redLabel, greenLabel, blueLabel)
         editColorViewBackground()
     }
     
-    @IBAction func blueSliderAction() {
-        blueLabel.text = String(round(100 * blueSlider.value)/100)
+    @IBAction func rgbSlider(_ sender: UISlider){
+        switch sender {
+        case redSlider:
+            redLabel.text = string(from: redSlider)
+        case greenSlider:
+            greenLabel.text = string(from: greenSlider)
+        default:
+             blueLabel.text = string(from: blueSlider)
+        }
+        
         editColorViewBackground()
     }
     
-    private func initLabelValues() {
-        redLabel.text = String(redSlider.value)
-        greenLabel.text = String(greenSlider.value)
-        blueLabel.text = String(blueSlider.value)
+    private func string(from slider: UISlider) -> String {
+        String(format: "%.2f", slider.value)
+    }
+    
+    private func setValue(for labels: UILabel...) {
+        labels.forEach { label in
+            switch label {
+            case redLabel:
+                redLabel.text = string(from: redSlider)
+            case greenLabel:
+                greenLabel.text = string(from: greenSlider)
+            default:
+                blueLabel.text = string(from: blueSlider)
+            }
+        }
     }
     
     private func editColorViewBackground() {
